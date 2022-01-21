@@ -4,18 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-let city = {
-  name: "Madrid",
-  country: "Spain"
+// Introduction to react funcitonal components
+function Hello({library, message}) {
+  return (
+    <div>
+      <h1>Welcome to {library}</h1>
+      <p>{message}</p>
+    </div>
+  );
+
 }
 
 // JSX ftw
 
 // BTW I would never write it this way just following along for now
 ReactDOM.render(
-  <h1 id="heading" className='cool-text'>
-    Hello from {city.name} in {city.country}
-  </h1>,
+  <Hello library = "React" message = "Have Fun" />,
   document.getElementById('root')
 );
 
