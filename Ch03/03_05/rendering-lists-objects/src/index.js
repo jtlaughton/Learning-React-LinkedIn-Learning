@@ -13,7 +13,7 @@ function App(props){
   return (
     <div>
       {props.lakes.map(lake => (
-        <div>
+        <div key={lake.id}>
           <h2>{lake.name}</h2>
           <p>accessed by {lake.trailhead}</p>
         </div>
